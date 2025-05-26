@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 
 import type { Metadata } from 'next';
 
-import './global.css';
+import '@/modules/styles/global.css';
 
 export const metadata: Metadata = {
   title: '프론트엔드 - 과제',
