@@ -1,3 +1,4 @@
+import RandomBackgroundImage from '@/modules/components/RandomBackgroundImage';
 import { MainTitle } from '@/modules/components/Text';
 import UserCardList from '@/modules/components/UserCardList';
 
@@ -11,6 +12,9 @@ function IndexPage() {
           never before
         </MainTitle>
         <UserCardList className="mt-17.5" />
+      </section>
+      <section className="mt-27.5">
+        <RandomBackgroundImage />
       </section>
     </main>
   );

@@ -6,10 +6,11 @@ const config: Config = {
   theme: {
     extend: {
       padding: {
-        '30': '7.5rem',
+        '30': '7.5rem', //120px
       },
       margin: {
-        '17.5': '4.375rem',
+        '17.5': '4.375rem', //70px
+        '27.5': '6.875rem', //110px
       },
       fontSize: {
         '48': '48px',
