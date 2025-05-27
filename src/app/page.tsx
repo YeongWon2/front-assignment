@@ -2,6 +2,7 @@ import clsx from 'clsx';
 
 import Divider from '@/modules/components/Divider';
 import EmailInput from '@/modules/components/EmailInput';
+import FilterByCountry from '@/modules/components/FilterByCountry';
 import RandomBackgroundImage from '@/modules/components/RandomBackgroundImage';
 import { MainTitle } from '@/modules/components/Text';
 import UserCardList from '@/modules/components/UserCardList';
@@ -56,6 +57,12 @@ function IndexPage() {
           </h5>
           <EmailInput className="mt-5" />
         </RandomBackgroundImage>
+      </section>
+      <section className="mt-30 px-20">
+        <MainTitle>Duis tincidunt ut ligula vitae mollis.</MainTitle>
+        <div className="mt-15">
+          <FilterByCountry />
+        </div>
       </section>
     </main>
   );

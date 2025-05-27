@@ -5,19 +5,28 @@ const config: Config = {
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
-      padding: {
-        '30': '7.5rem', //120px
-      },
       colors: {
         divider: 'rgba(255, 255, 255, 0.5)',
         'validation-success': '#00C300',
         'validation-error': '#FF6633',
       },
+      gap: {
+        '1.25': '0.3125rem', // 5px
+      },
+      borderRadius: {
+        '6.25': '1.5625rem', // 25px
+      },
+      padding: {
+        '1.25': '0.3125rem', // 5px
+        '30': '7.5rem', //120px
+      },
       margin: {
         '5.75': '1.4375rem', // 23px
+        '15': '3.75rem', // 60px
         '17.5': '4.375rem', // 70px
         '23.75': '5.9375rem', // 95px
         '27.5': '6.875rem', // 110px
+        '30': '7.5rem', // 120px
       },
       fontSize: {
         '48': '48px',
@@ -111,6 +120,14 @@ const config: Config = {
           'line-height': 'normal',
           'letter-spacing': '-0.24px',
           color: '#ffffff',
+        },
+        '.text-filter-button': {
+          'font-size': '16px',
+          'font-weight': 'normal',
+          'font-stretch': 'normal',
+          'font-style': 'normal',
+          'line-height': 'normal',
+          'letter-spacing': '-0.24px',
         },
       });
     }),
