@@ -9,20 +9,25 @@ const config: Config = {
         divider: 'rgba(255, 255, 255, 0.5)',
         'validation-success': '#00C300',
         'validation-error': '#FF6633',
+        'news-card': '#d9d9d9',
       },
       gap: {
         '1.25': '0.3125rem', // 5px
       },
       borderRadius: {
+        '1.25': '0.3125rem', // 5px
+        '2.5': '0.625rem', // 10px
         '6.25': '1.5625rem', // 25px
       },
       padding: {
         '1.25': '0.3125rem', // 5px
+        '3.75': '0.9375rem', // 15px
         '30': '7.5rem', //120px
       },
       margin: {
         '5.75': '1.4375rem', // 23px
         '15': '3.75rem', // 60px
+        '17': '4.25rem', // 68px
         '17.5': '4.375rem', // 70px
         '23.75': '5.9375rem', // 95px
         '27.5': '6.875rem', // 110px
@@ -38,6 +43,11 @@ const config: Config = {
   plugins: [
     plugin(function ({ addUtilities }) {
       addUtilities({
+        '.scroll-none': {
+          '::-webkit-scrollbar': {
+            display: 'none',
+          },
+        },
         '.text-48': {
           'font-size': '48px',
         },
@@ -136,6 +146,33 @@ const config: Config = {
           'font-style': 'normal',
           'line-height': 'normal',
           'letter-spacing': '-0.21px',
+        },
+        '.text-news-title': {
+          'font-size': '16px',
+          'font-weight': 'bold',
+          'font-stretch': 'normal',
+          'font-style': 'normal',
+          'line-height': 'normal',
+          'letter-spacing': '-0.24px',
+          color: '#000',
+        },
+        '.text-news-wordcount': {
+          'font-size': '16px',
+          'font-weight': 'normal',
+          'font-stretch': 'normal',
+          'font-style': 'normal',
+          'line-height': 'normal',
+          'letter-spacing': '-0.24px',
+          color: '#000',
+        },
+        '.text-news-content': {
+          'font-size': '14px',
+          'font-weight': 'normal',
+          'font-stretch': 'normal',
+          'font-style': 'normal',
+          'line-height': 'normal',
+          'letter-spacing': '-0.21px',
+          color: '#000',
         },
       });
     }),

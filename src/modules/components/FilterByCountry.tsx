@@ -7,7 +7,7 @@ import clsx from 'clsx';
 import { FONT_FAMILY } from '@/modules/styles/typography';
 
 // 필터 enum 정의
-enum FilterRegion {
+export enum FilterRegion {
   ALL = 'All',
   ASIA = 'Asia',
   EUROPE = 'Europe',

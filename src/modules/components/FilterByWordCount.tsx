@@ -40,15 +40,25 @@ function FilterByWordCount({
 
   const handleStepClick = useCallback(
     (clickedIndex: number) => {
-      // 1000 (인덱스 0) 클릭은 무시
+      // 1000 (인덱스 0) 클릭 시 1000 to 1000 범위 설정
       if (clickedIndex === 0) {
+        const newRange = { start: 0, end: 0 };
+        setSelectedRange(newRange);
+        onSelectionChange?.({
+          start: data[0].value, // 1000
+          end: data[0].value, // 1000
+        });
         return;
       }
 
-      // 1300 이상 (인덱스 1 이상)만 선택 가능
+      // 1300 이상 (인덱스 1 이상) 클릭 시
       if (clickedIndex >= 1) {
         // 현재 선택된 범위와 같은 경우 무시 (같은 범위 재선택 방지)
-        if (selectedRange && selectedRange.end === clickedIndex) {
+        if (
+          selectedRange &&
+          selectedRange.end === clickedIndex &&
+          selectedRange.start === 0
+        ) {
           return;
         }
 

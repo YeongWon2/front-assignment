@@ -4,30 +4,11 @@ import {
   UNSPLASH_ACCESS_KEY,
   UNSPLASH_API_BASE_URL,
 } from '@/modules/helpers/env-helpers';
-import { TRandomImageDTO } from '@/modules/types/unsplash/unsplash-type';
-
-// Unsplash API 응답 타입
-interface IUnsplashPhotoResponse {
-  id: string;
-  description: string | null;
-  alt_description: string | null;
-  urls: {
-    regular: string;
-  };
-  user: {
-    name: string;
-    username: string;
-  };
-}
-
-// API 요청 파라미터 타입
-interface IUnsplashApiParams {
-  client_id: string;
-  query?: string;
-  orientation?: 'landscape' | 'portrait' | 'squarish';
-  content_filter?: 'low' | 'high';
-  count?: number;
-}
+import {
+  IUnsplashApiParams,
+  IUnsplashPhotoResponse,
+  TRandomImageDTO,
+} from '@/modules/types/unsplash/unsplash-type';
 
 /**
  * Unsplash API에서 랜덤 이미지 가져오기 (24시간 캐시)
