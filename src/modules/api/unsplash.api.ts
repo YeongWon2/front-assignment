@@ -26,26 +26,27 @@ export async function fetchRandomImage(
     };
 
     const queryString = qs.stringify(params, {
-      addQueryPrefix: false,
+      addQueryPrefix: true,
       encode: true,
       skipNulls: true,
     });
 
-    const url = `${UNSPLASH_API_BASE_URL}/photos/random?${queryString}`;
-
-    const response = await fetch(url, {
-      method: 'GET',
-      headers: {
-        Authorization: `Client-ID ${UNSPLASH_ACCESS_KEY}`,
-        'Content-Type': 'application/json',
-      },
-      // 24시간 캐시 설정
-      next: {
-        revalidate: 86400, // 24시간 (86400초)
-        tags: ['unsplash-image', `query-${query}`],
-      },
-      cache: 'force-cache',
-    });
+    const response = await fetch(
+      `${UNSPLASH_API_BASE_URL}/photos/random${queryString}`,
+      {
+        method: 'GET',
+        headers: {
+          Authorization: `Client-ID ${UNSPLASH_ACCESS_KEY}`,
+          'Content-Type': 'application/json',
+        },
+        // 24시간 캐시 설정
+        next: {
+          revalidate: 86400, // 24시간 (86400초)
+          tags: ['unsplash-image', `query-${query}`],
+        },
+        cache: 'force-cache',
+      }
+    );
 
     if (!response.ok) {
       throw new Error(`HTTP 요청 실패! 상태 코드: ${response.status}`);
