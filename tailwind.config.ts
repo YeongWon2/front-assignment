@@ -121,13 +121,21 @@ const config: Config = {
           'letter-spacing': '-0.24px',
           color: '#ffffff',
         },
-        '.text-filter-button': {
+        '.text-filter-country': {
           'font-size': '16px',
           'font-weight': 'normal',
           'font-stretch': 'normal',
           'font-style': 'normal',
           'line-height': 'normal',
           'letter-spacing': '-0.24px',
+        },
+        '.text-filter-wordcount': {
+          'font-size': '14px',
+          'font-weight': 'normal',
+          'font-stretch': 'normal',
+          'font-style': 'normal',
+          'line-height': 'normal',
+          'letter-spacing': '-0.21px',
         },
       });
     }),

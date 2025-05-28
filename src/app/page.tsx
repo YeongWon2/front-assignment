@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import Divider from '@/modules/components/Divider';
 import EmailInput from '@/modules/components/EmailInput';
 import FilterByCountry from '@/modules/components/FilterByCountry';
+import FilterByWordCount from '@/modules/components/FilterByWordCount';
 import RandomBackgroundImage from '@/modules/components/RandomBackgroundImage';
 import { MainTitle } from '@/modules/components/Text';
 import UserCardList from '@/modules/components/UserCardList';
@@ -60,8 +61,9 @@ function IndexPage() {
       </section>
       <section className="mt-30 px-20">
         <MainTitle>Duis tincidunt ut ligula vitae mollis.</MainTitle>
-        <div className="mt-15">
+        <div className="mt-15 flex items-center gap-5">
           <FilterByCountry />
+          <FilterByWordCount />
         </div>
       </section>
     </main>

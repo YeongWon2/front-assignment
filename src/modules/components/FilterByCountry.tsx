@@ -61,7 +61,7 @@ function FilterByCountry({ onFilterChange }: IFilterByCountryProps) {
             key={filter.id}
             className={clsx(
               'px-4 py-3',
-              'text-filter-button text-center whitespace-nowrap',
+              'text-filter-country text-center whitespace-nowrap',
               'border-none rounded-6.25 cursor-pointer',
               'transition-all duration-200 hover:opacity-80',
               {
